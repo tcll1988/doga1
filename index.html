@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c86">
+  <meta name="description" content="日本の大学生のための中国語リスニング教材。7課の表現・単語・練習を音声とともに学びます。">
+  <title>听见中文 | 中国語リスニング教材</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/content-store.js" defer></script>
+  <script src="content/lesson-01.js" defer></script>
+  <script src="content/lesson-02.js" defer></script>
+  <script src="content/lesson-03.js" defer></script>
+  <script src="content/lesson-04.js" defer></script>
+  <script src="content/lesson-05.js" defer></script>
+  <script src="content/lesson-06.js" defer></script>
+  <script src="content/lesson-07.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="听见中文 ホーム"><span class="brand-mark" lang="zh-Hans">听</span><span><b lang="zh-Hans">听见中文</b><small>中国語リスニング教材</small></span></a>
+    <div class="header-controls">
+      <span class="level-badge">HSK 3級対応</span>
+      <div class="font-controls"><label for="font-size">文字サイズ</label><select id="font-size"><option value="16">標準</option><option value="18">大きめ</option><option value="20">大</option></select></div>
+      <a class="pdf-download" href="assets/documents/student-print.pdf" download="動画１学生印刷用.pdf" target="_blank" rel="noopener" aria-label="学生用PDFをダウンロード（印刷用、約7.7 MB）" title="学生用PDFをダウンロード（約7.7 MB）">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></svg>
+        <span class="download-full">学生用PDFをダウンロード</span><span class="download-short" aria-hidden="true">学生用PDF</span>
+      </a>
+    </div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" aria-label="教材の目次">
+      <a id="home-link" class="home-link" href="#home"><span aria-hidden="true">⌂</span> はじめに・使い方</a>
+      <p class="nav-heading">LESSONS <span>全7課</span></p>
+      <nav id="lesson-nav" aria-label="課を選ぶ"></nav>
+      <div class="sidebar-note"><b>少しずつ、聞けるように。</b><p>表現を聞く → 単語を確認する → 練習に挑戦する</p></div>
+    </aside>
+    <main id="main" tabindex="-1"><p class="boot-message">教材を読み込んでいます…</p></main>
+  </div>
+  <div id="storage-notice" role="status" hidden></div>
+  <footer class="player" aria-label="音声プレーヤー">
+    <audio id="audio" preload="metadata"></audio>
+    <div class="track"><span class="track-icon" aria-hidden="true">♫</span><div><div id="track-name">カードを押して音声を再生</div><span id="player-status" role="status" aria-live="polite">待機中</span></div></div>
+    <div class="transport"><button id="player-toggle" class="round-button" disabled aria-label="音声を再生">▶</button><button id="player-stop" class="stop-button" disabled>■ 停止</button></div>
+    <div class="seek-wrap"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" value="0" step="0.1" disabled aria-label="再生位置"><span id="duration">0:00</span></div>
+    <label class="speed-label" for="speed">再生速度<select id="speed"><option value="0.5">0.5倍</option><option value="0.75">0.75倍</option><option value="1" selected>1倍</option><option value="1.25">1.25倍</option><option value="1.5">1.5倍</option><option value="1.75">1.75倍</option><option value="2">2倍</option></select></label>
+  </footer>
+  <noscript><div class="noscript">この教材を使うには、ブラウザーのJavaScriptを有効にしてください。</div></noscript>
+
+  <!-- 首页说明模板：直接修改这里的日语 HTML，不需改交互代码。 -->
+  <template id="home-template">
+    <section class="home-intro">
+      <div class="eyebrow">はじめに / INTRODUCTION</div>
+      <h1>音からはじめる、<br><span>中国語の学び。</span></h1>
+      <p>大学の授業でも、自分のペースでの復習でも。身近な会話を聞いて、表現・単語・聞き取りを少しずつ身につけましょう。</p>
+      <a class="primary-link" href="#lesson-01/expressions">第1課をはじめる <span>食事と水泳</span></a>
+      <div class="course-facts"><span><b>7</b> 課</span><span><b>56</b> 表現</span><span><b>244</b> 単語</span><span><b>280</b> 練習問題</span></div>
+    </section>
+    <section class="intro-section" aria-labelledby="hsk-title">
+      <div class="section-heading"><span class="section-number">01</span><div><p>試験を知る</p><h2 id="hsk-title">HSK 3級の聞き取り</h2></div></div>
+      <p>HSKは中国語の運用能力を測る試験です。従来形式の3級は、日常生活・学習・仕事での基本的なやり取りを目指す段階で、学習の目安は約600語です。</p>
+      <div class="fact-strip"><div><strong>40問</strong><span>聞き取りの問題数</span></div><div><strong>約35分</strong><span>聞き取りの時間</span></div><div><strong>2回</strong><span>各問題の放送回数</span></div></div>
+      <div class="table-scroll"><table><caption>従来形式のHSKと本教材の対応</caption><thead><tr><th scope="col">HSKの部分</th><th scope="col">聞き取る内容</th><th scope="col">本教材</th></tr></thead><tbody><tr><th scope="row">第1部分・10問</th><td>短い会話に合う絵を選ぶ</td><td>① 絵を選ぶ</td></tr><tr><th scope="row">第2部分・10問</th><td>短文と提示文の内容が一致するか判断する</td><td>② 正誤を判断する</td></tr><tr><th scope="row">第3部分・10問</th><td>短い会話と質問を聞き、3つの選択肢から答える</td><td rowspan="2">③ 会話を理解する<br><small>計20問</small></td></tr><tr><th scope="row">第4部分・10問</th><td>やや長い会話と質問を聞き、3つの選択肢から答える</td></tr></tbody></table></div>
+      <div class="info-note"><b>この教材の位置づけ</b><p>提供された模擬問題は従来の4部分形式です。ここでは復習しやすい3部分に整理し、全問を収録しています。問題順は毎回変わり、時間制限はありません。音声は元の録音を再生し、放送回数を自動で追加しません。漫画の会話に由来する表現には、3級の基本語彙を超えるものも含まれます。</p><p>HSK 3.0への移行に関する案内も出ています。受験する試験の形式は、申込先の最新案内で確認してください。</p></div>
+      <p class="source-note">試験概要の確認：2026年10月1日。<a href="https://www.hskj.jp/level/w_3/" target="_blank" rel="noopener noreferrer">HSK日本実施委員会・筆記3級</a> / <a href="https://admin.chinesetest.cn/gonewcontent.do?id=51236758" target="_blank" rel="noopener noreferrer">HSK 3.0試行の公式案内</a>。学習機能はオフラインで利用できます。</p>
+    </section>
+    <section class="intro-section" aria-labelledby="how-title">
+      <div class="section-heading"><span class="section-number">02</span><div><p>教材を使う</p><h2 id="how-title">学習の進め方</h2></div></div>
+      <ol class="how-steps"><li><b>表現を聞く</b><p>カードのどこを押しても再生できます。再生中のカードをもう一度押すと一時停止、さらに押すと続きから再生します。</p></li><li><b>単語を確認する</b><p>中国語・ピンイン・日本語をそれぞれ表示／非表示にできます。最初は中国語と日本語を表示し、ピンインを隠しています。</p></li><li><b>聞き取りに挑戦する</b><p>音声を聞いて選択肢を押すと、すぐに結果が出ます。間違えたときは正解と原文が表示されます。正解した問題も「原文を見る」から確認できます。</p></li><li><b>聞き直して復習する</b><p>「この問題をもう一度」で1問だけ、「この部分をやり直す」で現在の部分全体を復習できます。音声を共用する問題はひとまとまりで並びます。</p></li></ol>
+      <div class="study-tip"><b>聞き取りのコツ</b><p>最初は1倍速で、誰が・どこで・何をするのかに注目しましょう。難しいときは0.75倍速で聞き、原文を確認してから1倍速でもう一度。音声に合わせて声に出す練習もおすすめです。</p></div>
+      <p>画面下のプレーヤーには、再生状態・停止・再生位置・0.5〜2倍の速度設定があります。文字サイズは画面上部で変更できます。解答の進み具合は、このブラウザーに自動保存されます。別の端末やブラウザーとは共有されません。プライベート閲覧やブラウザーのデータ削除では、記録が残らないことがあります。</p>
+    </section>
+    <section class="intro-section lesson-overview" aria-labelledby="contents-title"><div class="section-heading"><span class="section-number">03</span><div><p>学習をはじめる</p><h2 id="contents-title">全7課の学習メニュー</h2></div></div><div id="home-lessons" class="home-lessons"></div></section>
+    <p class="source-note end-note">教材・音声・図版の出典：提供資料「動画１先生用.pdf」「OneDrive_1_2026-9-30.zip」。一部の誤記・設問を学習用に校訂しています。</p>
+  </template>
+</body>
+</html>
